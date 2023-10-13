@@ -14,12 +14,10 @@ function App() {
 
 	const orderHandler = () => {
 		console.log('ordered')
-		showCartHandler()
 	}
 
 	return (
 		<CartProvider>
-			{/* <Modal /> */}
 			{isInCart && <Cart onCloseCart={showCartHandler} onOrder={orderHandler} />}
 			{/* could use useContext onOpenCart  */}
 			<Header onOpenCart={showCartHandler} />
